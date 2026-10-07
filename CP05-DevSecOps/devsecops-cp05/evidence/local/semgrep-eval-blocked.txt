@@ -1,0 +1,36 @@
+$ semgrep scan --config .semgrep.yml --error <arquivo-de-teste>
+exit code: 1 (esperado: != 0)
+resultado: FINDING ERROR — regra cp05.python.dynamic-eval
+
+
+
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 1 file tracked by git with 1 Code rule:
+  Scanning 1 file.
+
+
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 1 (1 blocking)
+ • Rules run: 1
+ • Targets scanned: 1
+ • Parsed lines: ~100.0%
+ • No ignore information available
+Ran 1 rule on 1 file: 1 finding.
+
+
+┌────────────────┐
+│ 1 Code Finding │
+└────────────────┘
+
+    /tmp/cp05-sabotage-0106ms5c/unsafe_eval.py
+   ❯❯❱ cp05.python.dynamic-eval
+          ❰❰ Blocking ❱❱
+          eval() executa código dinâmico e pode permitir injeção de código. Use parsing explícito ou uma lista
+          de operações permitidas.
+
+            2┆ eval(user_input)

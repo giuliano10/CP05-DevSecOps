@@ -1,0 +1,16 @@
+{
+  "gitleaks": {
+    "temporary_branch": "proof/gitleaks-secret",
+    "disposable_ci_fixture_commit": "1790233",
+    "pre_commit_attempt": "blocked",
+    "synthetic_secret": "generated at runtime; never saved in repository",
+    "result": "blocked by hook and detected in committed fixture",
+    "exit_code": 1
+  },
+  "semgrep": {
+    "rule": "cp05.python.dynamic-eval",
+    "result": "finding reported; command failed as policy",
+    "exit_code": 1
+  },
+  "scope": "local CLI demonstration; not a GitHub Actions run"
+}

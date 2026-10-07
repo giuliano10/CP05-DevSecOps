@@ -1,0 +1,1 @@
+Gate CRITICAL exit code: 0 (clean image; expected 0)

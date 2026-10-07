@@ -1,0 +1,32 @@
+2026-10-07T00:07:50Z	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-07T00:07:51Z	INFO	Detected OS	family="alpine" version="3.12.12"
+2026-10-07T00:07:51Z	INFO	[alpine] Detecting vulnerabilities...	os_version="3.12" repository="3.12" pkg_num=14
+2026-10-07T00:07:51Z	INFO	Number of language-specific files	num=0
+2026-10-07T00:07:51Z	WARN	This OS version is no longer supported by the distribution	family="alpine" version="3.12.12"
+2026-10-07T00:07:51Z	WARN	The vulnerability detection may be insufficient because security updates are not provided
+
+Report Summary
+
+┌────────────────────────────────────────────────┬────────┬─────────────────┐
+│                     Target                     │  Type  │ Vulnerabilities │
+├────────────────────────────────────────────────┼────────┼─────────────────┤
+│ docker.io/library/alpine:3.12 (alpine 3.12.12) │ alpine │        1        │
+└────────────────────────────────────────────────┴────────┴─────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+docker.io/library/alpine:3.12 (alpine 3.12.12)
+==============================================
+Total: 1 (CRITICAL: 1)
+
+┌─────────┬────────────────┬──────────┬────────┬───────────────────┬───────────────┬─────────────────────────────────────────────────────────────┐
+│ Library │ Vulnerability  │ Severity │ Status │ Installed Version │ Fixed Version │                            Title                            │
+├─────────┼────────────────┼──────────┼────────┼───────────────────┼───────────────┼─────────────────────────────────────────────────────────────┤
+│ zlib    │ CVE-2022-37434 │ CRITICAL │ fixed  │ 1.2.12-r0         │ 1.2.12-r2     │ zlib: heap-based buffer over-read and overflow in inflate() │
+│         │                │          │        │                   │               │ in inflate.c via a...                                       │
+│         │                │          │        │                   │               │ https://avd.aquasec.com/nvd/cve-2022-37434                  │
+└─────────┴────────────────┴──────────┴────────┴───────────────────┴───────────────┴─────────────────────────────────────────────────────────────┘
+
+exit code da política CRITICAL: 1 (esperado: != 0)

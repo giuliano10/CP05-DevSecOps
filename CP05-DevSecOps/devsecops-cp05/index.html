@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração educacional de pipeline DevSecOps com barreiras de segurança verificáveis.">
+  <title>Sentinela | Pipeline DevSecOps</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Sentinela, início"><span class="brand-mark">S</span> SENTINELA</a>
+    <nav aria-label="Navegação principal"><a href="#barreiras">Barreiras</a><a href="#provas">Provas</a><a href="#sobre">Sobre</a></nav>
+  </header>
+  <main id="inicio">
+    <section class="hero">
+      <p class="eyebrow"><span class="pulse"></span> SEGURANÇA COMO CÓDIGO</p>
+      <h1>O deploy só passa<br><span>quando a segurança passa.</span></h1>
+      <p class="intro">Um pipeline de referência que procura credenciais expostas, padrões de código vulnerável e CVEs críticos em imagens de contêiner.</p>
+      <a class="button" href="#barreiras">Conheça as barreiras <span aria-hidden="true">↓</span></a>
+      <div class="hero-note"><span>CP05</span> Demonstração educacional · DevSecOps</div>
+    </section>
+    <section class="section" id="barreiras">
+      <div class="section-heading"><p class="eyebrow">DEFESA EM PROFUNDIDADE</p><h2>Três verificações.<br>Um mesmo objetivo.</h2></div>
+      <div class="cards">
+        <article class="card"><div class="card-icon">01</div><p class="tool">GITLEAKS</p><h3>Segredos não entram.</h3><p>Varre o histórico Git para identificar tokens, chaves e credenciais acidentalmente versionados.</p><span class="tag">Detecta credenciais</span></article>
+        <article class="card"><div class="card-icon">02</div><p class="tool">SEMGREP</p><h3>Código perigoso é sinalizado.</h3><p>Analisa o código-fonte com regras estáticas; a regra do projeto bloqueia o uso de <code>eval</code> em Python.</p><span class="tag">Análise estática</span></article>
+        <article class="card"><div class="card-icon">03</div><p class="tool">TRIVY</p><h3>Imagem crítica é barrada.</h3><p>Inspeciona pacotes do sistema e bibliotecas da imagem, fazendo o job falhar se houver CVE crítico.</p><span class="tag">CVE crítico bloqueante</span></article>
+      </div>
+    </section>
+    <section class="proof" id="provas">
+      <div><p class="eyebrow">EVIDÊNCIA, NÃO PROMESSA</p><h2>As barreiras foram<br>testadas por sabotagem.</h2><p>Testes reproduzíveis demonstram um commit com token sintético detectado, um <code>eval</code> apontado e uma análise de vulnerabilidades da imagem.</p></div>
+      <div class="proof-panel"><div class="panel-top"><span></span><span></span><span></span><b>resultado do pipeline</b></div><div class="check"><span>✓</span><div><b>Histórico Git</b><small>gitleaks · bloqueia segredo</small></div><strong>BLOCK</strong></div><div class="check"><span>✓</span><div><b>Análise estática</b><small>semgrep · encontra eval</small></div><strong>BLOCK</strong></div><div class="check"><span>✓</span><div><b>Imagem OCI</b><small>trivy · política CRITICAL</small></div><strong>BLOCK</strong></div><p class="panel-foot">Falhar com segurança é o comportamento esperado.</p></div>
+    </section>
+    <section class="section about" id="sobre"><p class="eyebrow">PRINCÍPIO</p><h2>Remediar antes do merge.<br>Rotacionar sempre que um segredo vazar.</h2><p>Uma ferramenta de detecção reduz o risco, mas não substitui rotação imediata de credenciais expostas, revisão de histórico e proteção de branch com checks obrigatórios.</p></section>
+  </main>
+  <footer><span>Sentinela · CP05</span><span>Protótipo estático para fins educacionais</span></footer>
+</body>
+</html>
